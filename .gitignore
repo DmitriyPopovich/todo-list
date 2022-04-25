@@ -1,24 +1,9 @@
 
 # dependencies
 /node_modules
-package-lock.json
 
 # production
 /dist
 
-
-
-
-# testing
-/coverage
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-
+package-lock.json
 
