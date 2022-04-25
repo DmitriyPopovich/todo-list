@@ -1,2 +1,2 @@
-import SearchPanel from './search-panel'
-export default SearchPanel
+import SearchInput from './search-input'
+export default SearchInput

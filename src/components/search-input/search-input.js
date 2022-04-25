@@ -1,11 +1,15 @@
 import React from 'react'
-import './search-panel.css'
+import './search-input.css'
 
-
-const SearchInput = () => {
+const SearchInput = (props) => {
+    const {term, onChange} = props
     return(
-        <input placeholder="search" />
+        <input
+            data-testid="input-search"
+            value={term}
+            onChange={onChange}
+            placeholder="search"
+        />
     )
 }
-
 export default SearchInput

@@ -1,20 +1,51 @@
 {
-  "name": "todo-list",
-  "version": "1.0.0",
-  "description": "training todo-list",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "todo",
-    "test-app"
-  ],
-  "author": "dima-bas",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11"
-  }
+    "name": "todo-list",
+    "version": "1.0.0",
+    "description": "webpack-build, react, redux-toolkit, jest, react-test-library, e2e",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server",
+        "build-dev": "webpack --env mode=development",
+        "build-prod": "webpack --env mode=production",
+        "test": "react-scripts test",
+        "wdio": "wdio run wdio.conf.js"
+    },
+    "keywords": [
+        "todo",
+        "test-app"
+    ],
+    "author": "dima-bas <dima.bas.85@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.17.6",
+        "@babel/core": "^7.17.9",
+        "@babel/preset-env": "^7.16.11",
+        "@babel/preset-react": "^7.16.7",
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.1.1",
+        "@wdio/cli": "^7.19.6",
+        "@wdio/local-runner": "^7.19.5",
+        "@wdio/mocha-framework": "^7.19.5",
+        "@wdio/spec-reporter": "^7.19.5",
+        "babel-loader": "^8.2.5",
+        "chromedriver": "^100.0.0",
+        "css-loader": "^6.7.1",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.6.0",
+        "react-scripts": "^5.0.1",
+        "style-loader": "^3.3.1",
+        "wdio-chromedriver-service": "^7.3.2",
+        "webpack": "^5.72.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.8.1"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.8.1",
+        "core-js": "^3.22.2",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-redux": "^8.0.1",
+        "redux-persist": "^6.0.0",
+        "uuid": "^8.3.2"
+    }
 }
