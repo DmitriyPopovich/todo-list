@@ -6,6 +6,7 @@ Commands:
 - production build:          npm run build-prod
 - list supported browsers:   npx browserslist
 - run React tests:           npm run test
+- run e2e tests:             npm run test-e2e  //start app before run, e2e driver chrome
 
 
 

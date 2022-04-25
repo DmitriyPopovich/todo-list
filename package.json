@@ -8,7 +8,7 @@
         "build-dev": "webpack --env mode=development",
         "build-prod": "webpack --env mode=production",
         "test": "react-scripts test",
-        "wdio": "wdio run wdio.conf.js"
+        "test-e2e": "wdio run ./wdio.conf.js"
     },
     "keywords": [
         "todo",
