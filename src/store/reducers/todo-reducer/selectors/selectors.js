@@ -1,0 +1,1 @@
+export const toogleSelector = (field) => (state) => state?.todo[field] || 0
