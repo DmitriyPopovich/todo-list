@@ -15,16 +15,19 @@ const ItemStatusFilterContainer = () => {
     const onChangeFilter = (e) => {
         dispatch(setFilter(e.target.id))
     }
-    const addFilterDataHelper = (data, filter) => {
-        //прямое изменение данных
-        for(let i=0; i<data.length; i++){
-            if(data[i].name === filter) data[i].clazz = 'btn btn-info'
-            else data[i].clazz = 'btn btn-outline-secondary'
-        }
+    const buttonsMode = (data, filter) => {
+        const res = []
+        let clazz
+        data.map(item => {
+            if(item.name === filter) clazz = 'btn btn-info'
+            else clazz = 'btn btn-outline-secondary'
+            res.push({...item, clazz})
+        })
+        return res
     }
-    addFilterDataHelper(buttons_data, filter)
+    const mod_button = buttonsMode(buttons_data, filter)
     return(
-        <ItemStatusFilter buttons={buttons_data} onChangeFilter={onChangeFilter}/>
+        <ItemStatusFilter buttons={mod_button} onChangeFilter={onChangeFilter}/>
     )
 }
 export default ItemStatusFilterContainer
