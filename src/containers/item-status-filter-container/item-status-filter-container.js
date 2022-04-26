@@ -16,14 +16,12 @@ const ItemStatusFilterContainer = () => {
         dispatch(setFilter(e.target.id))
     }
     const buttonsMode = (data, filter) => {
-        const res = []
         let clazz
-        data.map(item => {
+        return data.map(item => {
             if(item.name === filter) clazz = 'btn btn-info'
             else clazz = 'btn btn-outline-secondary'
-            res.push({...item, clazz})
+            return {...item, clazz}
         })
-        return res
     }
     const mod_button = buttonsMode(buttons_data, filter)
     return(
