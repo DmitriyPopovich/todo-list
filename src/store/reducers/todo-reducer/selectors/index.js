@@ -1,14 +1,14 @@
 import {
-    getMoreValue,
-    getDoneValue,
-    getItemsValues,
-    getTermValue,
-    getFilterValue
-} from './selectors'
+  getMoreValue,
+  getDoneValue,
+  getItemsValues,
+  getTermValue,
+  getFilterValue
+} from "./selectors";
 export {
-    getDoneValue,
-    getMoreValue,
-    getItemsValues,
-    getTermValue,
-    getFilterValue
-}
+  getDoneValue,
+  getMoreValue,
+  getItemsValues,
+  getTermValue,
+  getFilterValue
+};

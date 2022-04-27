@@ -1,22 +1,21 @@
-import React from 'react';
-import * as ReactDOMClient from 'react-dom/client'
-import {Provider} from 'react-redux'
-import App from './components/app'
-import {createReduxStore, persistCreator} from './store'
-import {PersistGate} from 'redux-persist/integration/react'
-import initialState from './store/initial-state'
+import React from "react";
+import * as ReactDOMClient from "react-dom/client";
+import { Provider } from "react-redux";
+import App from "./components/app";
+import { createReduxStore, persistCreator } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
+import initialState from "./store/initial-state";
 
+const container = document.getElementById("root");
+const root = ReactDOMClient.createRoot(container);
 
-const container = document.getElementById('root')
-const root = ReactDOMClient.createRoot(container)
-
-const store = createReduxStore(initialState)
-const persist = persistCreator(store)
+const store = createReduxStore(initialState);
+const persist = persistCreator(store);
 
 root.render(
-    <Provider store={store}>
-        <PersistGate loading={null} persistor={persist}>
-            <App/>
-        </PersistGate>
-    </Provider>
-)
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persist}>
+      <App />
+    </PersistGate>
+  </Provider>
+);

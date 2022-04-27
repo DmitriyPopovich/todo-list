@@ -1,2 +1,2 @@
-import ItemStatusFilter from './item-status-filter'
-export default ItemStatusFilter
+import ItemStatusFilter from "./item-status-filter";
+export default ItemStatusFilter;

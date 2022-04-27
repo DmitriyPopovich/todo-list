@@ -1,0 +1,6 @@
+dist/
+wdio.conf.js
+webpack.config.js
+node_modules/
+tests/
+*.test.js

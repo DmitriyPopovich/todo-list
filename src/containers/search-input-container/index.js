@@ -1,2 +1,2 @@
-import SearchInputContainer from './search-input-container'
-export default SearchInputContainer
+import SearchInputContainer from "./search-input-container";
+export default SearchInputContainer;

@@ -1,2 +1,2 @@
-import {persistCreator, createReduxStore} from './store'
-export {persistCreator, createReduxStore}
+import { persistCreator, createReduxStore } from "./store";
+export { persistCreator, createReduxStore };
