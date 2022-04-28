@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "./app";
 import { renderWithRedux } from "../../tests/helpers/renderWithRedux";

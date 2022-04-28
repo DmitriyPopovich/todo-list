@@ -2,8 +2,7 @@ import React from "react";
 import "./app-header.css";
 import PropTypes from "prop-types";
 
-const AppHeader = (props) => {
-  const { more, done } = props;
+const AppHeader = ({ more, done }) => {
   return (
     <div className="app-header d-flex" data-testid="main-div-header">
       <h2>Todo List</h2>
@@ -15,7 +14,7 @@ const AppHeader = (props) => {
   );
 };
 AppHeader.propTypes = {
-  more: PropTypes.string.isRequired,
-  done: PropTypes.string.isRequired
+  more: PropTypes.number,
+  done: PropTypes.number
 };
 export default AppHeader;

@@ -1,3 +1,4 @@
+import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { renderWithRedux } from "../../tests/helpers/renderWithRedux";
 import SearchInputContainer from "./search-input-container";

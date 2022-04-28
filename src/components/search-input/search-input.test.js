@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import SearchInput from "./search-input";
 import { renderWithRedux } from "../../tests/helpers/renderWithRedux";

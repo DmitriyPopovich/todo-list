@@ -42,7 +42,7 @@ const TodoListItem = (props) => {
   );
 };
 TodoListItem.propTypes = {
-  item: PropTypes.object,
+  item: PropTypes.any,
   clazz: PropTypes.string,
   onToogleImportant: PropTypes.func.isRequired,
   onToggleDone: PropTypes.func.isRequired,

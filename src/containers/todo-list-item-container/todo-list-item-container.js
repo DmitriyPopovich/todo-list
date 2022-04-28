@@ -26,6 +26,6 @@ const TodoListItemContainer = ({ important, done, id, ...props }) => {
 TodoListItemContainer.propTypes = {
   important: PropTypes.bool.isRequired,
   done: PropTypes.bool.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.any.isRequired
 };
 export default TodoListItemContainer;

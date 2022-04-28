@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { renderWithRedux } from "../../tests/helpers/renderWithRedux";
 import ItemAddFormContainer from "./item-add-form-container";
