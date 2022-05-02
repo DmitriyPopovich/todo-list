@@ -48,6 +48,7 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
     "html-webpack-plugin": "^5.5.0",
+    "jquery": "^3.6.0",
     "mini-css-extract-plugin": "^2.6.0",
     "prop-types": "^15.8.1",
     "react-scripts": "^5.0.1",
@@ -59,10 +60,12 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
+    "bootstrap": "^4.6.0",
     "core-js": "^3.22.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
     "redux-persist": "^6.0.0",
     "uuid": "^8.3.2"
   }

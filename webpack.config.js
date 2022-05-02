@@ -37,7 +37,8 @@ module.exports = (env = {}) => {
     mode: isProd ? "production" : isDev && "development",
     devtool: "source-map",
     output: {
-      filename: isProd ? "main-[hash:8].js" : undefined
+      filename: isProd ? "main-[hash:8].js" : undefined,
+      publicPath: "/"
     },
     module: {
       rules: [
@@ -82,7 +83,9 @@ module.exports = (env = {}) => {
     },
     plugins: getPlugins(),
     devServer: {
-      open: true
+      open: true,
+      historyApiFallback: true
+      // port: 9001
     }
   };
 };

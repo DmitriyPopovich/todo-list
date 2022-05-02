@@ -5,7 +5,7 @@ import "./search-box.css";
 
 const SearchBox = () => {
   return (
-    <div className="top-panel d-flex" data-testid="main-div-searchbox">
+    <div className="top-panel d-flex s_box" data-testid="main-div-searchbox">
       <SearchInputContainer />
       <ItemStatusFilterContainer />
     </div>

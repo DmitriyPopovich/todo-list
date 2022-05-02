@@ -1,18 +1,19 @@
 import React from "react";
-import ItemAddFormContainer from "../../containers/item-add-form-container";
-import TodoListContainer from "../../containers/todo-list-container";
-import AppHeaderContainer from "../../containers/app-header-container";
-import SearchBox from "../search-box";
+import { Routes, Route } from "react-router-dom";
+import { TodoPage } from "../../pages";
 import "./app.css";
+import UsersPageContainer from "../../containers/users-page-container";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+// import 'font-awesome/css/font-awesome.min.css'
 
 const App = () => {
   return (
-    <div className="todo-app" data-testid="main-div-app">
-      <AppHeaderContainer />
-      <SearchBox />
-      <TodoListContainer />
-      <ItemAddFormContainer />
-    </div>
+    <Routes>
+      <Route path="/" exact element={<TodoPage />} />
+      <Route path="/users" element={<UsersPageContainer />} />
+      <Route path="*" element={<h3>Page not found</h3>} />
+    </Routes>
   );
 };
 export default App;

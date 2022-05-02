@@ -1,20 +1,29 @@
 import React from "react";
 import "./app-header.css";
-import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
-const AppHeader = ({ more, done }) => {
+const AppHeader = () => {
   return (
-    <div className="app-header d-flex" data-testid="main-div-header">
-      <h2>Todo List</h2>
-      <h3 className="list-done">
-        <span data-testid="span-header-more">{more}</span> more to do, {done}{" "}
-        done
+    <div className="header d-flex">
+      <h3>
+        <NavLink to="/">App</NavLink>
       </h3>
+      <ul className="d-flex">
+        <li>
+          <NavLink to="/" activeclassname={"active"}>
+            Todo
+          </NavLink>
+        </li>
+      </ul>
+      <ul className="d-flex">
+        <li>
+          <NavLink to="/users" activeclassname={"active"}>
+            Users
+          </NavLink>
+        </li>
+      </ul>
     </div>
   );
 };
-AppHeader.propTypes = {
-  more: PropTypes.number,
-  done: PropTypes.number
-};
+
 export default AppHeader;

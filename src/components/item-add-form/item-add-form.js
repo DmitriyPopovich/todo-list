@@ -21,7 +21,7 @@ const ItemAddForm = ({ text, updateTextHandler, addTodoHandler }) => {
         type="button"
         className="btn btn-outline-secondary"
       >
-        Add Item
+        Add
       </button>
     </form>
   );

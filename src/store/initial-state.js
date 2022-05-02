@@ -11,6 +11,12 @@ const initialState = {
     more: todo_initialItems.length,
     term: "",
     filter: "all" //all, done, active
+  },
+  fakeapi: {
+    users: [],
+    cartUsers: [],
+    status: false,
+    error: false
   }
 };
 export default initialState;
