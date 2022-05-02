@@ -1,18 +1,17 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { onUserRemove } from "./actions";
+import { onAddInCart, onUserRemove } from "./actions";
 import { _transformPersons } from "./transform-data-helpers";
 
 export const fetchUsers = createAsyncThunk(
   "fakeapi/fetchUsers",
-  async function (_, { rejectWithValue }) {
+  async function (_, { rejectWithValue, dispatch }) {
     try {
       const resp = await fetch(
         "https://jsonplaceholder.typicode.com/users?_limit=2"
       );
       if (!resp.ok) throw new Error("Error loading...");
       const data = await resp.json();
-      return _transformPersons(data);
-      // dispatch(setUsers(_transformPersons(data)))
+      dispatch(setUsers(_transformPersons(data)));
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -46,11 +45,14 @@ const fakeApiSlice = createSlice({
   name: "fakeapi",
   initialState: null,
   reducers: {
-    // setUsers: (state, action) => {
-    //   state.items = action.payload;
-    // },
+    setUsers: (state, action) => {
+      state.users = action.payload;
+    },
     removeUser: (state, action) => {
       onUserRemove(state, action);
+    },
+    addInCart: (state, action) => {
+      onAddInCart(state, action);
     }
   },
   extraReducers: {
@@ -58,14 +60,13 @@ const fakeApiSlice = createSlice({
       state.status = "loading";
       state.error = false;
     },
-    [fetchUsers.fulfilled]: (state, action) => {
+    [fetchUsers.fulfilled]: (state) => {
       state.status = "resolved";
       state.error = false;
-      state.users = action.payload;
     },
     [fetchUsers.rejected]: setError,
     [deleteUser.rejected]: setError
   }
 });
-export const { setUsers, removeUser } = fakeApiSlice.actions;
+export const { setUsers, removeUser, addInCart } = fakeApiSlice.actions;
 export default fakeApiSlice.reducer;

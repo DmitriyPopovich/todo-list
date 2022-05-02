@@ -2,7 +2,7 @@ import React from "react";
 import "./users-list-item.css";
 import PropTypes from "prop-types";
 
-const UsersListItem = ({ id, name, email, phone, onRemove }) => {
+const UsersListItem = ({ id, name, email, phone, onRemove, onAdd }) => {
   return (
     <li>
       <div className="users-list-item">
@@ -10,7 +10,10 @@ const UsersListItem = ({ id, name, email, phone, onRemove }) => {
           <span className="user-ltitle">{name}</span>
           <div className="user-lauthor">{email}</div>
           <div className="user-lprice">{phone}</div>
-          <button onClick={() => {}} className="btn btn-info add-to-cart">
+          <button
+            onClick={() => onAdd(id)}
+            className="btn btn-info add-to-cart"
+          >
             Add to Table
           </button>
           <button
@@ -25,10 +28,11 @@ const UsersListItem = ({ id, name, email, phone, onRemove }) => {
   );
 };
 UsersListItem.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   name: PropTypes.string,
   email: PropTypes.string,
   phone: PropTypes.string,
-  onRemove: PropTypes.func
+  onRemove: PropTypes.func,
+  onAdd: PropTypes.func
 };
 export default UsersListItem;

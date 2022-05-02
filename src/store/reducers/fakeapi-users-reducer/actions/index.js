@@ -1,2 +1,2 @@
-import { onUserRemove } from "./actions";
-export { onUserRemove } from "./actions";
+import { onUserRemove, onAddInCart } from "./actions";
+export { onUserRemove, onAddInCart } from "./actions";
