@@ -5,7 +5,7 @@ import {
   getUserStatus,
   getUserError
 } from "../../store/reducers/fakeapi-users-reducer/selectors";
-import { UsersPage } from "../../pages";
+import UsersPage from "../../pages/users-page";
 
 const UsersPageContainer = () => {
   const dispatch = useDispatch();

@@ -1,10 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { TodoPage } from "../../pages";
+
 import "./app.css";
 import UsersPageContainer from "../../containers/users-page-container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import TodoPage from "../../pages/todo-page";
 
 const App = () => {
   return (
