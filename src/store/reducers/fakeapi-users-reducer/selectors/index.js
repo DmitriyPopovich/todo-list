@@ -2,6 +2,7 @@ import {
   getUserStatus,
   getUserError,
   getUsersData,
-  getCartData
+  getCartData,
+  getCartTotal
 } from "./selectors";
-export { getUserStatus, getUserError, getUsersData, getCartData };
+export { getUserStatus, getUserError, getUsersData, getCartData, getCartTotal };
