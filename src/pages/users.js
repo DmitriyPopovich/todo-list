@@ -6,6 +6,7 @@ import Spinner from "../components/spinner";
 import ErrorIndicator from "../components/error-indicator";
 import UsersListContainer from "../containers/users-list-container";
 import PropTypes from "prop-types";
+import UsersTableContainer from "../containers/users-table-container";
 
 const UsersPage = ({ status, error }) => {
   return (
@@ -16,7 +17,7 @@ const UsersPage = ({ status, error }) => {
           {status === "loading" && <Spinner />}
           {error && <ErrorIndicator />}
           <UsersListContainer />
-          <UsersTable />
+          <UsersTableContainer />
         </ErrorBoundary>
       </div>
     </>
