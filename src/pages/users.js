@@ -1,6 +1,5 @@
 import React from "react";
 import AppHeader from "../components/app-header";
-import UsersTable from "../components/users-table";
 import ErrorBoundary from "../components/error-boundry";
 import Spinner from "../components/spinner";
 import ErrorIndicator from "../components/error-indicator";

@@ -1,15 +1,15 @@
 import React from "react";
 import UsersTable from "../../components/users-table";
-import {useDispatch, useSelector} from "react-redux";
+import { useSelector } from "react-redux";
+import { getCartData } from "../../store/reducers/fakeapi-users-reducer/selectors";
 
 const UsersTableContainer = () => {
-    const dispatch = useDispatch()
-    // const cartUsers = useSelector()
+  const cartUsers = useSelector(getCartData);
 
-    return (
-        <UsersTable />
-    );
+  return cartUsers.length ? (
+    <UsersTable items={cartUsers} />
+  ) : (
+    <h3>No data in cart</h3>
+  );
 };
-
-
 export default UsersTableContainer;

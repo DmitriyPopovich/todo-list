@@ -14,7 +14,7 @@ const UsersListItem = ({ id, name, email, phone, onRemove, onAdd }) => {
             onClick={() => onAdd(id)}
             className="btn btn-info add-to-cart"
           >
-            Add to Table
+            Add to Cart
           </button>
           <button
             onClick={() => onRemove(id)}

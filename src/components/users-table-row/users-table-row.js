@@ -1,28 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const UsersTableRow = (item) => {
-  const { title, count, total } = item;
+const UsersTableRow = (props) => {
+  const onIncrease = props.onIncrease;
+  const onDecrease = props.onDecrease;
+  const onRemove = props.onRemove;
+  const { id, name, count } = props.item;
   return (
     <tr>
-      <td>{title}</td>
+      <td>{id}</td>
+      <td>{name}</td>
       <td>{count}</td>
-      <td>{total}</td>
       <td>
         <button
-          onClick={() => {}}
+          onClick={() => onRemove(id)}
           className="btn btn-outline-danger btn-sm float-right"
         >
           <i className="fa fa-trash-o" />
         </button>
         <button
-          onClick={() => {}}
+          onClick={() => onIncrease(id)}
           className="btn btn-outline-success btn-sm float-right"
         >
           <i className="fa fa-plus-circle" />
         </button>
         <button
-          onClick={() => {}}
+          onClick={() => onDecrease(id)}
           className="btn btn-outline-warning btn-sm float-right"
         >
           <i className="fa fa-minus-circle" />
@@ -32,10 +35,10 @@ const UsersTableRow = (item) => {
   );
 };
 UsersTableRow.propTypes = {
-  id: PropTypes.number,
-  title: PropTypes.string,
-  count: PropTypes.number,
-  total: PropTypes.number
+  item: PropTypes.object,
+  onIncrease: PropTypes.func.isRequired,
+  onDecrease: PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired
 };
 
 export default UsersTableRow;

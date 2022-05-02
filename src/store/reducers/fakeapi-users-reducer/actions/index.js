@@ -1,2 +1,14 @@
-import { onUserRemove, onAddInCart } from "./actions";
-export { onUserRemove, onAddInCart } from "./actions";
+import {
+  onUserRemove,
+  onAddInCart,
+  onIncreaseInCart,
+  onDecreaseInCart,
+  onRemoveFromCart
+} from "./actions";
+export {
+  onUserRemove,
+  onAddInCart,
+  onIncreaseInCart,
+  onDecreaseInCart,
+  onRemoveFromCart
+};

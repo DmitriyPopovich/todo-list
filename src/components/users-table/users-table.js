@@ -1,9 +1,9 @@
 import React from "react";
-import UsersTableRow from "../users-table-row";
 import "./users-table.css";
 import PropTypes from "prop-types";
+import UsersTableRowContainer from "../../containers/users-table-row-container";
 
-const UsersTable = ({ items = [] }) => {
+const UsersTable = ({ items }) => {
   return (
     <div className="shopping-cart-table">
       <h2>User Orders</h2>
@@ -16,9 +16,10 @@ const UsersTable = ({ items = [] }) => {
             <th>Actions</th>
           </tr>
         </thead>
-
         <tbody>
-          <UsersTableRow {...items} />
+          {items.map((item) => (
+            <UsersTableRowContainer key={item.id} item={item} />
+          ))}
         </tbody>
       </table>
       <div className="total">Total Orders: 0</div>

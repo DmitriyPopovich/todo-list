@@ -1,5 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { onAddInCart, onUserRemove } from "./actions";
+import {
+  onAddInCart,
+  onDecreaseInCart,
+  onIncreaseInCart,
+  onRemoveFromCart,
+  onUserRemove
+} from "./actions";
 import { _transformPersons } from "./transform-data-helpers";
 
 export const fetchUsers = createAsyncThunk(
@@ -53,6 +59,15 @@ const fakeApiSlice = createSlice({
     },
     addInCart: (state, action) => {
       onAddInCart(state, action);
+    },
+    increaseInCart: (state, action) => {
+      onIncreaseInCart(state, action);
+    },
+    decreaseInCart: (state, action) => {
+      onDecreaseInCart(state, action);
+    },
+    removeFromCart: (state, action) => {
+      onRemoveFromCart(state, action);
     }
   },
   extraReducers: {
@@ -68,5 +83,12 @@ const fakeApiSlice = createSlice({
     [deleteUser.rejected]: setError
   }
 });
-export const { setUsers, removeUser, addInCart } = fakeApiSlice.actions;
+export const {
+  setUsers,
+  removeUser,
+  addInCart,
+  increaseInCart,
+  decreaseInCart,
+  removeFromCart
+} = fakeApiSlice.actions;
 export default fakeApiSlice.reducer;

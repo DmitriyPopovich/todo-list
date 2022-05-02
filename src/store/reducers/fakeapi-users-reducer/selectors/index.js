@@ -1,2 +1,7 @@
-import { getUserStatus, getUserError, getUsersData } from "./selectors";
-export { getUserStatus, getUserError, getUsersData };
+import {
+  getUserStatus,
+  getUserError,
+  getUsersData,
+  getCartData
+} from "./selectors";
+export { getUserStatus, getUserError, getUsersData, getCartData };
