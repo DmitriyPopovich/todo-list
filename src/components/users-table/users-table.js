@@ -17,7 +17,7 @@ const UsersTable = ({ items, total }) => {
           </tr>
         </thead>
         <tbody>
-          {items.map((item) => (
+          {items?.map((item) => (
             <UsersTableRowContainer key={item.id} item={item} />
           ))}
         </tbody>
@@ -29,6 +29,10 @@ const UsersTable = ({ items, total }) => {
 UsersTable.propTypes = {
   items: PropTypes.array,
   total: PropTypes.number
+};
+UsersTable.defaultProps = {
+  items: [],
+  total: 0
 };
 
 export default UsersTable;

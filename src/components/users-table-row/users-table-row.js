@@ -40,5 +40,11 @@ UsersTableRow.propTypes = {
   onDecrease: PropTypes.func.isRequired,
   onRemove: PropTypes.func.isRequired
 };
+UsersTableRow.defaultProps = {
+  items: { id: 1, name: "default", count: 0 },
+  onIncrease: () => console.log("onIncrease default"),
+  onDecrease: () => console.log("onDecrease default"),
+  onRemove: () => console.log("onRemove default")
+};
 
 export default UsersTableRow;

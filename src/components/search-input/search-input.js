@@ -17,4 +17,8 @@ SearchInput.propTypes = {
   term: PropTypes.string,
   onChange: PropTypes.func
 };
+SearchInput.defaultProps = {
+  term: "",
+  onChange: (e) => console.log(e.target.value)
+};
 export default SearchInput;

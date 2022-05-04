@@ -6,7 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { createReduxStore, persistCreator } from "./store";
 
 import App from "./components/app";
-import ErrorBoundary from "./components/error-boundry";
+import ErrorBoundary from "./containers/error-boundry";
 import initialState from "./store/initial-state";
 
 const container = document.getElementById("root");

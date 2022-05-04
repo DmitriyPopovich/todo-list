@@ -17,4 +17,8 @@ TodoHeader.propTypes = {
   more: PropTypes.number,
   done: PropTypes.number
 };
+TodoHeader.defaultProps = {
+  more: 0,
+  done: 0
+};
 export default TodoHeader;

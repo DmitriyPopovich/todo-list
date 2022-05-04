@@ -35,4 +35,12 @@ UsersListItem.propTypes = {
   onRemove: PropTypes.func,
   onAdd: PropTypes.func
 };
+UsersListItem.defaultProps = {
+  id: 1,
+  name: "default",
+  email: "default",
+  phone: "default",
+  onRemove: () => console.log("onRemove default"),
+  onAdd: () => console.log("onAdd default")
+};
 export default UsersListItem;

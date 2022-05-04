@@ -10,14 +10,22 @@ const AppHeader = () => {
       </h3>
       <ul className="d-flex">
         <li>
-          <NavLink to="/" activeclassname={"active"}>
+          <NavLink
+            to="/"
+            activeclassname={"active"}
+            data-testid="todo_link_nav"
+          >
             Todo
           </NavLink>
         </li>
       </ul>
       <ul className="d-flex">
         <li>
-          <NavLink to="/users" activeclassname={"active"}>
+          <NavLink
+            to="/users"
+            activeclassname={"active"}
+            data-testid="users_link_nav"
+          >
             Users
           </NavLink>
         </li>

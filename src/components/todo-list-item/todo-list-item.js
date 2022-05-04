@@ -48,4 +48,11 @@ TodoListItem.propTypes = {
   onToggleDone: PropTypes.func.isRequired,
   onRemove: PropTypes.func.isRequired
 };
+TodoListItem.defaultProps = {
+  item: { id: 1, label: "test" },
+  clazz: "",
+  onToogleImportant: () => console.log("onToogleImportant default"),
+  onToggleDone: () => console.log("onToggleDone default"),
+  onRemove: () => console.log("onRemove default")
+};
 export default TodoListItem;

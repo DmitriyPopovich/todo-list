@@ -31,4 +31,9 @@ ItemAddForm.propTypes = {
   updateTextHandler: PropTypes.func.isRequired,
   addTodoHandler: PropTypes.func.isRequired
 };
+ItemAddForm.defaultProps = {
+  text: "",
+  updateTextHandler: () => console.log("updateTextHandler default"),
+  addTodoHandler: () => console.log("addTodoHandler default")
+};
 export default ItemAddForm;

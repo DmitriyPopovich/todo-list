@@ -15,4 +15,7 @@ const TodoList = ({ items }) => {
 TodoList.propTypes = {
   items: PropTypes.array
 };
+TodoList.defaultProps = {
+  items: []
+};
 export default TodoList;
