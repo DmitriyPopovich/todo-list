@@ -25,4 +25,7 @@ const UsersTableRowContainer = ({ item }) => {
 UsersTableRowContainer.propTypes = {
   item: PropTypes.object.isRequired
 };
+UsersTableRowContainer.defaultProps = {
+  item: {}
+};
 export default UsersTableRowContainer;

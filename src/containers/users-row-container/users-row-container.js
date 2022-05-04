@@ -30,4 +30,9 @@ UsersRowContainer.propTypes = {
   onRemove: PropTypes.func,
   onAdd: PropTypes.func
 };
+UsersRowContainer.defaultProps = {
+  users: [],
+  onRemove: () => console.log("onRemove default"),
+  onAdd: () => console.log("onAdd default")
+};
 export default UsersRowContainer;

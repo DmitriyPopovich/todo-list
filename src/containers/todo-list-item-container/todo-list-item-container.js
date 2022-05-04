@@ -28,4 +28,9 @@ TodoListItemContainer.propTypes = {
   done: PropTypes.bool.isRequired,
   id: PropTypes.any.isRequired
 };
+TodoListItemContainer.defaultProps = {
+  important: false,
+  done: false,
+  id: 1
+};
 export default TodoListItemContainer;
