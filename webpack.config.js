@@ -35,7 +35,7 @@ module.exports = (env = {}) => {
   return {
     entry: "./src/index.js",
     mode: isProd ? "production" : isDev && "development",
-    devtool: "source-map",
+    devtool: "source-map",//отключить на проде
     output: {
       filename: isProd ? "main-[hash:8].js" : undefined,
       publicPath: "/"
